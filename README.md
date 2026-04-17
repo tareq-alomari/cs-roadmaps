@@ -1,61 +1,156 @@
-# 🎓 خارطة طريق علوم الحاسوب الشاملة
+<div align="center">
 
-> **CS Roadmap Arabic** — دليل شامل ومجاني لتعلم تخصصات علوم الحاسوب باحترافية باللغة العربية.
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=32&duration=3000&pause=1000&color=00D9FF&center=true&vCenter=true&width=600&lines=خارطة+طريق+علوم+الحاسوب;CS+Roadmap+%7C+بالعربية;من+المبتدئ+إلى+الاحتراف" alt="Typing SVG" />
 
-[![GitHub Stars](https://img.shields.io/github/stars/tareq-alomari/cs-roadmaps?style=social)](https://github.com/tareq-alomari/cs-roadmaps)
-[![GitHub Forks](https://img.shields.io/github/forks/tareq-alomari/cs-roadmaps?style=social)](https://github.com/tareq-alomari/cs-roadmaps)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+<br/>
 
-مستودع متكامل يحتوي على خرائط طريق احترافية لجميع تخصصات علوم الحاسوب — **مجاني، بالعربية، للمبتدئين والمحترفين**.
+[![Stars](https://img.shields.io/github/stars/tareq-alomari/cs-roadmaps?style=for-the-badge&color=FFD700&labelColor=1a1a2e)](https://github.com/tareq-alomari/cs-roadmaps/stargazers)
+[![Forks](https://img.shields.io/github/forks/tareq-alomari/cs-roadmaps?style=for-the-badge&color=00D9FF&labelColor=1a1a2e)](https://github.com/tareq-alomari/cs-roadmaps/network/members)
+[![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge&labelColor=1a1a2e)](LICENSE)
+[![Arabic](https://img.shields.io/badge/Language-العربية-red?style=for-the-badge&labelColor=1a1a2e)](README.md)
 
-## التخصصات
+<br/>
 
-| التخصص | المجلد | المستوى |
-|--------|--------|---------|
-| 🛡️ الأمن السيبراني | [cybersecurity/](./cybersecurity/) | مبتدئ → خبير |
-| 💻 هندسة البرمجيات | [software-engineering/](./software-engineering/) | مبتدئ → خبير |
-| 🤖 الذكاء الاصطناعي | [ai-ml/](./ai-ml/) | مبتدئ → خبير |
-| 📊 علم البيانات | [data-science/](./data-science/) | مبتدئ → خبير |
-| ☁️ السحابة و DevOps | [cloud-devops/](./cloud-devops/) | مبتدئ → خبير |
-| 🌐 تطوير الويب | [web-development/](./web-development/) | مبتدئ → خبير |
-| 📱 تطوير الموبايل | [mobile-development/](./mobile-development/) | مبتدئ → خبير |
-| 🔌 الأنظمة المدمجة | [embedded-systems/](./embedded-systems/) | مبتدئ → خبير |
-| 🌍 الشبكات | [networking/](./networking/) | مبتدئ → خبير |
-| 🏛️ أساسيات علوم الحاسوب | [computer-science-fundamentals/](./computer-science-fundamentals/) | مبتدئ → متقدم |
+> **دليل شامل ومجاني** لتعلم جميع تخصصات علوم الحاسوب باحترافية — مُصمَّم للمهندسين والطلاب الراغبين في التخصص.
 
-## كيف تستخدم هذا المستودع؟
+</div>
 
-1. اختر تخصصك من الجدول أعلاه
-2. افتح مجلد التخصص واقرأ `README.md` أولًا
-3. اتبع الملفات بالترتيب الرقمي
-4. كل ملف يحتوي على: مفاهيم + أمثلة عملية + مصادر + وقت مقدر
+---
 
-## مسار التعلم العام
+## 📖 عن المشروع
+
+هذا المستودع يحتوي على **خرائط طريق تفصيلية** لكل تخصص في علوم الحاسوب، تشمل:
+
+- ✅ المفاهيم النظرية مع أمثلة كود عملية
+- ✅ الأدوات والتقنيات المستخدمة في سوق العمل
+- ✅ الشهادات الاحترافية الموصى بها
+- ✅ أفضل المصادر المجانية والمدفوعة
+- ✅ تقدير زمني واقعي لكل مرحلة
+
+---
+
+## 🗺️ التخصصات
+
+<div align="center">
+
+| # | التخصص | المجلد | المستوى | الملفات |
+|---|--------|--------|---------|---------|
+| 🛡️ | **الأمن السيبراني** | [cybersecurity/](./cybersecurity/) | مبتدئ ← خبير | 14 ملف |
+| 💻 | **هندسة البرمجيات** | [software-engineering/](./software-engineering/) | مبتدئ ← خبير | 6 ملفات |
+| 🤖 | **الذكاء الاصطناعي وتعلم الآلة** | [ai-ml/](./ai-ml/) | مبتدئ ← خبير | 7 ملفات |
+| 📊 | **علم البيانات** | [data-science/](./data-science/) | مبتدئ ← خبير | 6 ملفات |
+| ☁️ | **السحابة و DevOps** | [cloud-devops/](./cloud-devops/) | مبتدئ ← خبير | 7 ملفات |
+| 🌐 | **تطوير الويب** | [web-development/](./web-development/) | مبتدئ ← خبير | 3 ملفات |
+| 📱 | **تطوير تطبيقات الموبايل** | [mobile-development/](./mobile-development/) | مبتدئ ← خبير | 6 ملفات |
+| 🌍 | **الشبكات** | [networking/](./networking/) | مبتدئ ← خبير | 5 ملفات |
+| 🔌 | **الأنظمة المدمجة** | [embedded-systems/](./embedded-systems/) | مبتدئ ← خبير | 5 ملفات |
+| 🏛️ | **أساسيات علوم الحاسوب** | [computer-science-fundamentals/](./computer-science-fundamentals/) | مبتدئ ← متقدم | 5 ملفات |
+
+</div>
+
+---
+
+## 🚀 كيف تبدأ؟
 
 ```
-أساسيات علوم الحاسوب (إلزامي للجميع)
-            ↓
-    اختر تخصصك الرئيسي
-            ↓
-    ابنِ مشاريع حقيقية
-            ↓
-    احصل على شهادة احترافية
-            ↓
-        سوق العمل
+1️⃣  اختر تخصصك من الجدول أعلاه
+2️⃣  افتح مجلد التخصص واقرأ README.md أولًا
+3️⃣  اتبع الملفات بالترتيب الرقمي
+4️⃣  طبّق كل مفهوم عمليًا قبل الانتقال للتالي
 ```
 
 ---
 
-## الكلمات المفتاحية
+## 🛤️ مسار التعلم العام
 
-`computer-science` `cybersecurity` `machine-learning` `web-development` `mobile-development` `networking` `data-science` `cloud-computing` `devops` `embedded-systems` `roadmap` `arabic` `تعلم-البرمجة` `علوم-الحاسوب` `أمن-سيبراني` `ذكاء-اصطناعي`
+```
+┌─────────────────────────────────────────────────────┐
+│          أساسيات علوم الحاسوب (إلزامي للجميع)       │
+│     Linux · Networking · Programming · Math          │
+└──────────────────────┬──────────────────────────────┘
+                       │
+          ┌────────────┼────────────┐
+          ▼            ▼            ▼
+    🛡️ Security    💻 Software   🤖 AI/ML
+    🌐 Web Dev     📱 Mobile     ☁️ Cloud
+    📊 Data Sci    🌍 Networking  🔌 Embedded
+          │            │            │
+          └────────────┼────────────┘
+                       ▼
+              🏆 سوق العمل والشهادات
+```
 
 ---
 
-## المساهمة
+## 📂 هيكل المستودع
 
-المساهمات مرحب بها! افتح [Issue](https://github.com/tareq-alomari/cs-roadmaps/issues) أو أرسل Pull Request.
+```
+cs-roadmaps/
+├── 📁 cybersecurity/
+│   ├── 00-prerequisites.md
+│   ├── 01-networking-fundamentals.md
+│   ├── 02-operating-systems.md
+│   ├── 03-programming-for-security.md
+│   ├── 04-cryptography.md
+│   ├── 05-ethical-hacking.md
+│   ├── 06-web-security.md
+│   ├── 07-network-security.md
+│   ├── 08-malware-analysis.md
+│   ├── 09-digital-forensics.md
+│   ├── 10-cloud-security.md
+│   ├── 11-certifications.md
+│   ├── 12-tools-arsenal.md
+│   └── 13-resources.md
+├── 📁 software-engineering/
+├── 📁 ai-ml/
+├── 📁 data-science/
+├── 📁 cloud-devops/
+├── 📁 web-development/
+├── 📁 mobile-development/
+├── 📁 networking/
+├── 📁 embedded-systems/
+└── 📁 computer-science-fundamentals/
+```
 
-## الرخصة
+---
 
-[MIT License](LICENSE) — مجاني للاستخدام والمشاركة.
+## 🏆 الشهادات الموصى بها
+
+<div align="center">
+
+| المجال | المبتدئ | المتقدم |
+|--------|---------|---------|
+| الأمن السيبراني | CompTIA Security+ · eJPT | OSCP · CISSP |
+| السحابة | AWS Cloud Practitioner | AWS SAA · CKA |
+| الشبكات | CompTIA Network+ | CCNA · CCNP |
+| AI/ML | Deep Learning Specialization | AWS ML Specialty |
+| DevOps | Terraform Associate | CKA · CKAD |
+
+</div>
+
+---
+
+## 🤝 المساهمة
+
+المساهمات مرحب بها جدًا!
+
+1. Fork المستودع
+2. أنشئ branch جديد: `git checkout -b feature/improve-cybersecurity`
+3. أضف تحسيناتك
+4. افتح Pull Request
+
+---
+
+## 📜 الرخصة
+
+هذا المشروع مرخص تحت [MIT License](LICENSE) — مجاني للاستخدام والمشاركة والتعديل.
+
+---
+
+<div align="center">
+
+**إذا أفادك هذا المستودع، لا تنسَ ⭐ Star**
+
+صُنع بـ ❤️ للمجتمع العربي التقني
+
+</div>

@@ -1,6 +1,12 @@
 # 🎓 خارطة طريق علوم الحاسوب الشاملة
 
-مستودع متكامل يحتوي على خرائط طريق احترافية لجميع تخصصات علوم الحاسوب.
+> **CS Roadmap Arabic** — دليل شامل ومجاني لتعلم تخصصات علوم الحاسوب باحترافية باللغة العربية.
+
+[![GitHub Stars](https://img.shields.io/github/stars/tareq-alomari/cs-roadmaps?style=social)](https://github.com/tareq-alomari/cs-roadmaps)
+[![GitHub Forks](https://img.shields.io/github/forks/tareq-alomari/cs-roadmaps?style=social)](https://github.com/tareq-alomari/cs-roadmaps)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
+مستودع متكامل يحتوي على خرائط طريق احترافية لجميع تخصصات علوم الحاسوب — **مجاني، بالعربية، للمبتدئين والمحترفين**.
 
 ## التخصصات
 
@@ -39,4 +45,17 @@
 ```
 
 ---
-> المستودع قيد التطوير المستمر. المساهمات مرحب بها!
+
+## الكلمات المفتاحية
+
+`computer-science` `cybersecurity` `machine-learning` `web-development` `mobile-development` `networking` `data-science` `cloud-computing` `devops` `embedded-systems` `roadmap` `arabic` `تعلم-البرمجة` `علوم-الحاسوب` `أمن-سيبراني` `ذكاء-اصطناعي`
+
+---
+
+## المساهمة
+
+المساهمات مرحب بها! افتح [Issue](https://github.com/tareq-alomari/cs-roadmaps/issues) أو أرسل Pull Request.
+
+## الرخصة
+
+[MIT License](LICENSE) — مجاني للاستخدام والمشاركة.

@@ -137,6 +137,214 @@ class ChartPainter extends CustomPainter {
 
 ---
 
+## أمثلة عملية متقدمة
+
+### Advanced State Management
+
+```dart
+// ChangeNotifierProvider
+class CartNotifier extends ChangeNotifier {
+  List<Product> _items = [];
+
+  List<Product> get items => _items;
+  double get total => _items.fold(0, (sum, p) => sum + p.price);
+
+  void add(Product p) {
+    _items.add(p);
+    notifyListeners();
+  }
+
+  void remove(String id) {
+    _items.removeWhere((p) => p.id == id);
+    notifyListeners();
+  }
+}
+
+// Usage
+Consumer<CartNotifier>(
+  builder: (ctx, cart, _) => Text('Total: \$${cart.total}'),
+)
+
+// Multi-provider
+ProviderScope(
+  overrides: [
+    productsProvider.overrideWithValue(MockProductsRepo()),
+  ],
+  child: MyApp(),
+)
+```
+
+### BLoC Pattern
+
+```dart
+// Events
+abstract class ProductEvent {}
+
+class LoadProducts extends ProductEvent {}
+
+class AddToCart extends ProductEvent {
+  final Product product;
+  AddToCart(this.product);
+}
+
+// States
+abstract class ProductState {}
+
+class ProductInitial extends ProductState {}
+
+class ProductLoading extends ProductState {}
+
+class ProductLoaded extends ProductState {
+  final List<Product> products;
+  ProductLoaded(this.products);
+}
+
+// BLoC
+class ProductBloc extends Bloc<ProductEvent, ProductState> {
+  final ProductRepository repository;
+
+  ProductBloc({required this.repository}) : super(ProductInitial()) {
+    on<LoadProducts>((event, emit) async {
+      emit(ProductLoading());
+      final products = await repository.getProducts();
+      emit(ProductLoaded(products));
+    });
+  }
+}
+
+// BlocBuilder & BlocListener
+BlocBuilder<ProductBloc, ProductState>(
+  builder: (ctx, state) {
+    if (state is ProductLoading) return CircularProgressIndicator();
+    if (state is ProductLoaded) return ListView(...);
+    return SizedBox();
+  },
+)
+```
+
+### Localization
+
+```dart
+// flutter_localizations
+import 'package:flutter_localizations/flutter_localizations.dart';
+
+MaterialApp(
+  localizationsDelegates: [
+    AppLocalizations.delegate,
+    GlobalMaterialLocalizations.delegate,
+    GlobalWidgetsLocalizations.delegate,
+  ],
+  supportedLocales: [
+    Locale('en'),
+    Locale('ar'),
+  ],
+  locale: Locale('ar'),
+)
+
+// arb files
+{
+  "@@locale": "ar",
+  "checkout": "الدفع",
+  "total": "المجموع"
+}
+
+// Usage
+Text(AppLocalizations.of(context)!.checkout)
+```
+
+### Platform Channels
+
+```dart
+// MethodChannel
+import 'package:flutter/services.dart';
+
+class NativeChannel {
+  static const channel = MethodChannel('com.app/native');
+
+  static Future<String> getBatteryLevel() async {
+    final level = await channel.invokeMethod('getBatteryLevel');
+    return level;
+  }
+
+  static Future<void> showToast(String msg) async {
+    await channel.invokeMethod('showToast', {'message': msg});
+  }
+}
+
+// iOS (Swift)
+@objc class AppDelegate: FlutterAppDelegate {
+  override func application(...) -> Bool {
+    let controller = window?.rootViewController as! FlutterViewController
+    let channel = FlutterMethodChannel(
+      name: "com.app/native",
+      binaryMessenger: controller.binaryMessenger
+    )
+    channel.setMethodCallHandler { call, result in
+      if call.method == "getBatteryLevel" {
+        result(UIDevice.current.batteryLevel)
+      }
+    }
+  }
+}
+```
+
+### App Architecture (Clean)
+
+```
+lib/
+├── core/
+│   ├── errors/
+│   ├── network/
+│   └── usecases/
+├── features/
+│   └── products/
+│       ├── data/
+│       │   ├── datasources/
+│       │   ├── models/
+│       │   └── repositories/
+│       ├── domain/
+│       │   ├── entities/
+│       │   ├── repositories/
+│       │   └── usecases/
+│       └── presentation/
+│           ├── bloc/
+│           ├── pages/
+│           └── widgets/
+└── injection_container.dart
+```
+
+### Testing
+
+```dart
+// Unit test
+test('cart total calculation', () {
+  final cart = CartNotifier();
+  cart.add(Product(price: 10));
+  cart.add(Product(price: 20));
+
+  expect(cart.total, 30);
+});
+
+// Widget test
+testWidgets('product card displays name', (tester) async {
+  await tester.pumpWidget(
+    ProductCard(product: Product(name: 'Test')),
+  );
+
+  expect(find.text('Test'), findsOneWidget);
+});
+
+// Integration test
+testWidgets('full checkout flow', (tester) async {
+  await app.launch();
+  await tester.tap(find.byType(ProductCard));
+  await tester.pumpAndSettle();
+  expect(find.text('Checkout'), findsOneWidget);
+});
+```
+
+---
+
 ## ⏱️ الوقت المقدر: 3-4 أشهر
 
 ## مصادر

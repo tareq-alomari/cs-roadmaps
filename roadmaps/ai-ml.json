@@ -1,0 +1,106 @@
+{
+  "id": "ai-ml",
+  "name": "الذكاء الاصطناعي",
+  "name_en": "AI/ML",
+  "description": "خارطة طريق شاملة للذكاء الاصطناعي وتعلم الآلة",
+  "levels": [
+    {
+      "level": 1,
+      "name": "الرياضيات",
+      "duration_months": 2,
+      "modules": [
+        {
+          "id": "mathematics",
+          "title": "الرياضيات",
+          "topics": [
+            "Linear Algebra",
+            "Calculus",
+            "Probability & Statistics",
+            "Optimization"
+          ],
+          "file": "01-mathematics.md"
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "name": "تعلم الآلة",
+      "duration_months": 4,
+      "modules": [
+        {
+          "id": "machine-learning",
+          "title": "تعلم الآلة الكلاسيكي",
+          "topics": [
+            "Supervised Learning",
+            "Unsupervised Learning",
+            "Bias-Variance Tradeoff",
+            "Cross-Validation",
+            "Evaluation Metrics"
+          ],
+          "file": "02-machine-learning.md"
+        }
+      ]
+    },
+    {
+      "level": 3,
+      "name": "التعلم العميق",
+      "duration_months": 6,
+      "modules": [
+        {
+          "id": "deep-learning",
+          "title": "التعلم العميق",
+          "topics": [
+            "Neural Networks",
+            "CNN",
+            "RNN & LSTM",
+            "Backpropagation",
+            "TensorFlow / PyTorch"
+          ],
+          "file": "03-deep-learning.md"
+        }
+      ]
+    },
+    {
+      "level": 4,
+      "name": "التخصص",
+      "duration_months": 12,
+      "modules": [
+        {
+          "id": "nlp",
+          "title": "معالجة اللغات الطبيعية",
+          "topics": [
+            "Word Embeddings",
+            "Transformers",
+            "BERT, GPT",
+            "Text Generation"
+          ],
+          "file": "04-nlp.md"
+        },
+        {
+          "id": "mlops",
+          "title": "MLOps",
+          "topics": [
+            "Model Training",
+            "Model Serving",
+            "ML Pipelines",
+            "Experiment Tracking"
+          ],
+          "file": "05-mlops.md"
+        }
+      ]
+    }
+  ],
+  "certifications": [
+    {"name": "Deep Learning Specialization", "level": "beginner", "provider": "Coursera"},
+    {"name": "TensorFlow Developer", "level": "intermediate", "provider": "Google"},
+    {"name": "AWS ML Specialty", "level": "advanced", "provider": "AWS"}
+  ],
+  "tools": [
+    "Python", "NumPy", "Pandas", "Scikit-learn",
+    "TensorFlow", "PyTorch", "Keras", "OpenCV"
+  ],
+  "resources": {
+    "free": ["Kaggle Learn", "Fast.ai"],
+    "paid": ["DeepLearning.AI"]
+  }
+}

@@ -1,0 +1,127 @@
+{
+  "id": "mobile-development",
+  "name": "تطوير تطبيقات الموبايل",
+  "name_en": "Mobile Development",
+  "description": "خارطة طريق شاملة لتطوير تطبيقات الموبايل",
+  "frameworks": [
+    {
+      "id": "react-native",
+      "name": "React Native",
+      "description": "إذا لديك خلفية JavaScript/React",
+      "duration_months": 4,
+      "modules": [
+        {
+          "id": "react-native-basics",
+          "title": "أساسيات React Native",
+          "topics": [
+            "Components & Props",
+            "State & Hooks",
+            "Navigation",
+            "Lists & FlatList"
+          ],
+          "file": "02-react-native.md"
+        },
+        {
+          "id": "react-native-advanced",
+          "title": "متقدم",
+          "topics": [
+            "React Query",
+            "Zustand",
+            "Animations",
+            "Performance"
+          ],
+          "file": "02-react-native.md"
+        }
+      ]
+    },
+    {
+      "id": "flutter",
+      "name": "Flutter",
+      "description": "إذا تريد أداء أفضل",
+      "duration_months": 4,
+      "modules": [
+        {
+          "id": "flutter-basics",
+          "title": "أساسيات Flutter",
+          "topics": [
+            "Dart",
+            "Widgets",
+            "State Management",
+            "Navigation"
+          ],
+          "file": "03-flutter.md"
+        },
+        {
+          "id": "flutter-advanced",
+          "title": "متقدم",
+          "topics": [
+            "Riverpod",
+            "BLoC",
+            "Animations",
+            "Platform Channels"
+          ],
+          "file": "03-flutter.md"
+        }
+      ]
+    },
+    {
+      "id": "native",
+      "name": "Native",
+      "description": "لتطبيقات المنصة الواحدة أو أعلى أداء",
+      "duration_months": 9,
+      "modules": [
+        {
+          "id": "swift",
+          "title": "Swift (iOS)",
+          "topics": [
+            "SwiftUI",
+            "ViewModel",
+            "Core Data",
+            "Combine"
+          ],
+          "file": "04-native-ios-android.md"
+        },
+        {
+          "id": "kotlin",
+          "title": "Kotlin (Android)",
+          "topics": [
+            "Jetpack Compose",
+            "ViewModel",
+            "Room",
+            "Coroutines"
+          ],
+          "file": "04-native-ios-android.md"
+        }
+      ]
+    }
+  ],
+  "concepts": [
+    {
+      "id": "mobile-fundamentals",
+      "title": "مفاهيم مشتركة",
+      "topics": [
+        "دورة حياة التطبيق",
+        "State Management",
+        "Networking",
+        "Local Storage",
+        "Push Notifications",
+        "Deep Linking",
+        "Permissions"
+      ],
+      "file": "01-mobile-fundamentals.md"
+    }
+  ],
+  "certifications": [
+    {"name": "Associate Android Developer", "level": "beginner", "provider": "Google"},
+    {"name": "Meta React Native", "level": "beginner", "provider": "Meta"},
+    {"name": "Google Developer Expert", "level": "expert", "provider": "Google"}
+  ],
+  "tools": [
+    "Xcode", "Android Studio", "VS Code", "Expo",
+    "Firebase", "React Native Debugger"
+  ],
+  "resources": {
+    "free": ["React Native Docs", "Flutter Docs"],
+    "paid": ["Udemy - Maximilian"]
+  }
+}

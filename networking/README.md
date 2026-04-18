@@ -5,12 +5,18 @@
 ```
 networking/
 ├── README.md
-├── 01-network-fundamentals.md    ← راجع cybersecurity/01-networking-fundamentals.md
+├── 01-networking-fundamentals.md
 ├── 02-routing-switching.md
-├── 03-network-security.md        ← راجع cybersecurity/07-network-security.md
-├── 04-wireless.md
+├── 03-wireless.md
+├── 04-network-security.md
 ├── 05-network-automation.md
-└── 06-certifications.md
+├── 06-certifications.md
+```
+
+## مسار التعلم
+
+```
+أساسيات الشبكات → Routing & Switching → Wireless → Security → Automation
 ```
 
 ## مسار التعلم

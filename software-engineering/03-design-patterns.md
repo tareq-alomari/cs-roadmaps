@@ -93,6 +93,238 @@ D - Dependency Inversion   اعتمد على Abstractions لا Concretions
 
 ---
 
+## أمثلة SOLID مفصلة
+
+### S — Single Responsibility
+
+```
+Bad:
+class User:
+    def authenticate(self): ...
+    def send_email(self): ...
+    def generate_report(self): ...
+    def save_to_database(self): ...
+
+Good:
+class Authenticator: ...
+class EmailService: ...
+class ReportGenerator: ...
+class UserRepository: ...
+```
+
+### O — Open/Closed
+
+```
+Bad (تعدل الكود عند إضافة ميزة):
+class Discount:
+    def calculate(self, user):
+        if user.type == "student": return 0.1
+        if user.type == "senior": return 0.2
+        return 0
+
+Good (تضيف بدون تعديل):
+class Discount(ABC):
+    @abstractmethod
+    def calculate(self, amount): pass
+
+class StudentDiscount(Discount):
+    def calculate(self, amount): return amount * 0.1
+
+class SeniorDiscount(Discount):
+    def calculate(self, amount): return amount * 0.2
+```
+
+### L — Liskov Substitution
+
+```
+Bad (الـ Subclass يختلف سلوك):
+class Bird:
+    def fly(self): pass
+
+class Penguin(Bird):
+    def fly(self): raise NotImplementedError()  # يكسر LSP
+
+Good:
+class Bird(ABC):
+    @abstractmethod
+    def move(self): pass
+
+class FlyingBird(Bird):
+    def fly(self): pass
+
+class Penguin(Bird):
+    def walk(self): pass
+```
+
+### I — Interface Segregation
+
+```
+Bad (interface كبيرة):
+interface Worker:
+    def work(): ...
+    def eat(): ...
+    def sleep(): ...
+
+Good (interfaces صغيرة):
+interface Workable:
+    def work(): ...
+
+interface Eatable:
+    def eat(): ...
+
+class Robot(Workable):
+    def work(self): ...
+
+class Human(Workable, Eatable):
+    def work(self): ...
+    def eat(self): ...
+```
+
+### D — Dependency Inversion
+
+```
+Bad ( зависит على konkret):
+class MySQLDatabase:
+    def query(self): ...
+
+class UserService:
+    def __init__(self): self.db = MySQLDatabase()
+
+Good (يعتمد على abstraction):
+class Database(ABC):
+    @abstractmethod
+    def query(self, sql): pass
+
+class MySQLDatabase(Database):
+    def query(self, sql): ...
+
+class UserService:
+    def __init__(self, db: Database): self.db = db
+```
+
+---
+
+## أنماط متقدمة
+
+### Repository Pattern
+
+```python
+class UserRepository:
+    def __init__(self, db: Database): self.db = db
+
+    def get_by_id(self, id): ...
+    def get_by_email(self, email): ...
+    def create(self, user): ...
+    def update(self, user): ...
+    def delete(self, id): ...
+
+# Usage
+repo = UserRepository(MySQLDatabase())
+user = repo.get_by_id(1)
+```
+
+### Unit of Work
+
+```python
+class UnitOfWork:
+    def __init__(self, session):
+        self.session = session
+        self.users = UserRepository(session)
+        self.orders = OrderRepository(session)
+
+    def __enter__(self):
+        return self
+
+    def __exit__(self, *args):
+        self.session.rollback() if args else self.session.commit()
+
+    def commit(self):
+        self.session.commit()
+
+# Usage
+with UnitOfWork(session) as uow:
+    uow.users.create(user)
+    uow.orders.create(order)
+```
+
+### Factory with DI
+
+```python
+class Container:
+    _services = {}
+
+    @classmethod
+    def register(cls, interface, implementation):
+        cls._services[interface] = implementation
+
+    @classmethod
+    def resolve(cls, interface):
+        impl = cls._services[interface]
+        return impl()
+
+# Registration
+Container.register(Database, MySQLDatabase)
+Container.register(EmailService, SendGridEmail)
+
+# Usage
+db = Container.resolve(Database)
+```
+
+### Pipeline / Chain of Responsibility
+
+```python
+class Middleware:
+    def __init__(self, nextMiddleware=None):
+        self.next = nextMiddleware
+
+    def process(self, request):
+        if self.next:
+            return self.next.process(request)
+        return request
+
+class AuthMiddleware(Middleware):
+    def process(self, request):
+        if not request.user:
+            raise Unauthorized()
+        return super().process(request)
+
+class ValidationMiddleware(Middleware):
+    def process(self, request):
+        if not request.data:
+            raise ValidationError()
+        return super().process(request)
+
+# Usage
+pipeline = ValidationMiddleware(AuthMiddleware(Middleware()))
+result = pipeline.process(request)
+```
+
+### Event-Driven Architecture
+
+```python
+class EventBus:
+    _handlers = {}
+
+    @classmethod
+    def subscribe(cls, event, handler):
+        cls._handlers.setdefault(event, []).append(handler)
+
+    @classmethod
+    def publish(cls, event, data):
+        for handler in cls._handlers.get(event, []):
+            handler(data)
+
+# Usage
+EventBus.subscribe("user.registered", send_welcome_email)
+EventBus.subscribe("user.registered", create_default_dashboard)
+
+def create_user(data):
+    user = db.create(data)
+    EventBus.publish("user.registered", user)
+```
+
+---
+
 ## ⏱️ الوقت المقدر: 3-4 أسابيع
 
 ## مصادر

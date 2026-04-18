@@ -1,4 +1,4 @@
-# 04 — Wireless Networking
+# 03 — Wireless Networking
 
 ---
 

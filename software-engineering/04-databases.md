@@ -112,6 +112,136 @@ Denormalization:
 
 ---
 
+## أمثلة عملية متقدمة
+
+### PostgreSQL — Common Table Expressions (CTE)
+
+```sql
+-- Hierarchical data ( organizational chart)
+WITH RECURSIVE org_chart AS (
+    SELECT id, name, manager_id, 1 as level
+    FROM employees
+    WHERE manager_id IS NULL
+
+    UNION ALL
+
+    SELECT e.id, e.name, e.manager_id, oc.level + 1
+    FROM employees e
+    INNER JOIN org_chart oc ON e.manager_id = oc.id
+)
+SELECT * FROM org_chart;
+
+-- Running total
+SELECT
+    date,
+    amount,
+    SUM(amount) OVER (ORDER BY date) as running_total
+FROM transactions;
+
+--排名
+SELECT
+    name,
+    sales,
+    RANK() OVER (ORDER BY sales DESC) as rank
+FROM employees;
+```
+
+### MongoDB — Advanced Queries
+
+```javascript
+// Transactions (multi-document)
+const session = mongoose.startSession();
+session.startTransaction();
+try {
+    await User.findByIdAndUpdate(userId, { $inc: { balance: -100 } }, { session });
+    await Order.create([{ userId, amount: 100 }], { session });
+    await session.commitTransaction();
+} catch (e) {
+    await session.abortTransaction();
+} finally {
+    await session.endSession();
+}
+
+// Aggregation with $lookup (joins)
+db.orders.aggregate([
+    {
+        $lookup: {
+            from: "users",
+            localField: "user_id",
+            foreignField: "_id",
+            as: "user"
+        }
+    },
+    { $unwind: "$user" },
+    {
+        $group: {
+            _id: "$user.country",
+            total: { $sum: "$amount" }
+        }
+    }
+]);
+```
+
+### Redis — Patterns المتقدمة
+
+```python
+# Distributed Lock
+def acquire_lock(lock_name, timeout=10):
+    return redis.set(lock_name, "1", nx=True, ex=timeout)
+
+def release_lock(lock_name):
+    redis.delete(lock_name)
+
+# Rate Limiter with Sliding Window
+def sliding_rate_limit(key, limit, window):
+    now = time.time()
+    start = now - window
+
+    pipe = redis.pipeline()
+    pipe.zremrangebyscore(key, 0, start)
+    pipe.zadd(key, {f"{now}": now})
+    pipe.zcard(key)
+    pipe.expire(key, window)
+
+    count = pipe.execute()[2]
+    return count <= limit
+
+# Leaderboard
+redis.zadd("leaderboard", {"user1": 1000, "user2": 2000})
+redis.zrevrange("leaderboard", 0, 10, WITHSCORES=True)
+redis.zrank("leaderboard", "user1")  #排名
+redis.zincrby("leaderboard", 50, "user1")
+```
+
+### Database Migration
+
+```sql
+-- Adding column safely
+ALTER TABLE users ADD COLUMN status VARCHAR(20) DEFAULT 'active';
+
+-- Rename column (PostgreSQL 11+)
+ALTER TABLE users RENAME COLUMN status TO account_status;
+
+-- Create index concurrently (no lock)
+CREATE INDEX CONCURRENTLY idx_user_email ON users(email);
+
+-- Multiple queries in one migration
+-- migrations/001_add_users.rb
+class AddUsers < ActiveRecord::Migration[7.0]
+  def change
+    create_table :users do |t|
+      t.string :name
+      t.string :email
+      t.timestamps
+    end
+
+    add_index :users, :email, unique: true
+  end
+end
+```
+
+---
+
 ## ⏱️ الوقت المقدر: 2-3 أشهر
 
 ## مصادر

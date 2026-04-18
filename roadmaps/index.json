@@ -1,0 +1,132 @@
+{
+  "version": "1.0.0",
+  "last_updated": "2026-04-18",
+  "roadmaps": [
+    {
+      "id": "cybersecurity",
+      "name": "الأمن السيبراني",
+      "name_en": "Cybersecurity",
+      "icon": "🛡️",
+      "folder": "cybersecurity",
+      "files": 14,
+      "levels": 4,
+      "duration_months": "18-36",
+      "json": "cybersecurit.json",
+      "prerequisites": ["Networking", "Linux", "Programming"]
+    },
+    {
+      "id": "software-engineering",
+      "name": "هندسة البرمجيات",
+      "name_en": "Software Engineering",
+      "icon": "💻",
+      "folder": "software-engineering",
+      "files": 7,
+      "levels": 3,
+      "duration_months": "12-18",
+      "json": "software-engineering.json",
+      "prerequisites": ["Programming", "Algorithms"]
+    },
+    {
+      "id": "ai-ml",
+      "name": "الذكاء الاصطناعي",
+      "name_en": "AI/ML",
+      "icon": "🤖",
+      "folder": "ai-ml",
+      "files": 7,
+      "levels": 4,
+      "duration_months": "12-24",
+      "json": "ai-ml.json",
+      "prerequisites": ["Mathematics", "Python"]
+    },
+    {
+      "id": "data-science",
+      "name": "علم البيانات",
+      "name_en": "Data Science",
+      "icon": "📊",
+      "folder": "data-science",
+      "files": 6,
+      "levels": 5,
+      "duration_months": "12-18",
+      "json": null,
+      "prerequisites": ["Statistics", "Python"]
+    },
+    {
+      "id": "cloud-devops",
+      "name": "السحابة و DevOps",
+      "name_en": "Cloud/DevOps",
+      "icon": "☁️",
+      "folder": "cloud-devops",
+      "files": 7,
+      "levels": 4,
+      "duration_months": "12-18",
+      "json": null,
+      "prerequisites": ["Linux", "Networking"]
+    },
+    {
+      "id": "web-development",
+      "name": "تطوير الويب",
+      "name_en": "Web Development",
+      "icon": "🌐",
+      "folder": "web-development",
+      "files": 5,
+      "levels": 3,
+      "duration_months": "8-12",
+      "json": null,
+      "prerequisites": ["HTML", "CSS", "JavaScript"]
+    },
+    {
+      "id": "mobile-development",
+      "name": "تطبيقات الموبايل",
+      "name_en": "Mobile Development",
+      "icon": "📱",
+      "folder": "mobile-development",
+      "files": 6,
+      "levels": 4,
+      "duration_months": "6-12",
+      "json": "mobile-development.json",
+      "prerequisites": ["JavaScript", "or", "Dart"]
+    },
+    {
+      "id": "networking",
+      "name": "الشبكات",
+      "name_en": "Networking",
+      "icon": "🌍",
+      "folder": "networking",
+      "files": 6,
+      "levels": 4,
+      "duration_months": "6-12",
+      "json": null,
+      "prerequisites": ["Basic Electronics"]
+    },
+    {
+      "id": "embedded-systems",
+      "name": "الأنظمة المدمجة",
+      "name_en": "Embedded Systems",
+      "icon": "🔌",
+      "folder": "embedded-systems",
+      "files": 5,
+      "levels": 4,
+      "duration_months": "12-18",
+      "json": null,
+      "prerequisites": ["Electronics", "C Programming"]
+    },
+    {
+      "id": "computer-science-fundamentals",
+      "name": "أساسيات علوم الحاسوب",
+      "name_en": "CS Fundamentals",
+      "icon": "🏛️",
+      "folder": "computer-science-fundamentals",
+      "files": 5,
+      "levels": 4,
+      "duration_months": "12-24",
+      "json": null,
+      "prerequisites": ["None"]
+    }
+  ],
+  "stats": {
+    "total_roadmaps": 10,
+    "total_files": 67,
+    "total_topics": 900,
+    "total_duration_months": "150-216"
+  }
+}

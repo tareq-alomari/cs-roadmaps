@@ -29,20 +29,27 @@
 
 ---
 
+## 📚 فهرس شامل
+
+للحصول على فهرس متكامل بجميع التخصصات والمواضيع، راجع [INDEX.md](./INDEX.md).
+
+---
+
 ## 🗺️ التخصصات
 
 <div align="center">
 
 | # | التخصص | المجلد | المستوى | الملفات |
 |---|--------|--------|---------|---------|
+| 📚 | **[فهرس شامل](./INDEX.md)** | فهرس جميع التخصصات | مبتدئ ← خبير | 1 ملف |
 | 🛡️ | **الأمن السيبراني** | [cybersecurity/](./cybersecurity/) | مبتدئ ← خبير | 14 ملف |
-| 💻 | **هندسة البرمجيات** | [software-engineering/](./software-engineering/) | مبتدئ ← خبير | 6 ملفات |
+| 💻 | **هندسة البرمجيات** | [software-engineering/](./software-engineering/) | مبتدئ ← خبير | 7 ملفات |
 | 🤖 | **الذكاء الاصطناعي وتعلم الآلة** | [ai-ml/](./ai-ml/) | مبتدئ ← خبير | 7 ملفات |
 | 📊 | **علم البيانات** | [data-science/](./data-science/) | مبتدئ ← خبير | 6 ملفات |
 | ☁️ | **السحابة و DevOps** | [cloud-devops/](./cloud-devops/) | مبتدئ ← خبير | 7 ملفات |
-| 🌐 | **تطوير الويب** | [web-development/](./web-development/) | مبتدئ ← خبير | 3 ملفات |
-| 📱 | **تطوير تطبيقات الموبايل** | [mobile-development/](./mobile-development/) | مبتدئ ← خبير | 6 ملفات |
-| 🌍 | **الشبكات** | [networking/](./networking/) | مبتدئ ← خبير | 5 ملفات |
+| 🌐 | **تطوير الويب** | [web-development/](./web-development/) | مبتدئ ← خبير | 5 ملفات |
+| 📱 | **تطبيقات الموبايل** | [mobile-development/](./mobile-development/) | مبتدئ ← خبير | 6 ملفات |
+| 🌍 | **الشبكات** | [networking/](./networking/) | مبتدئ ← خبير | 6 ملفات |
 | 🔌 | **الأنظمة المدمجة** | [embedded-systems/](./embedded-systems/) | مبتدئ ← خبير | 5 ملفات |
 | 🏛️ | **أساسيات علوم الحاسوب** | [computer-science-fundamentals/](./computer-science-fundamentals/) | مبتدئ ← متقدم | 5 ملفات |
 

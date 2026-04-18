@@ -1,0 +1,169 @@
+{
+  "id": "cybersecurity",
+  "name": "الأمن السيبراني",
+  "name_en": "Cybersecurity",
+  "description": "خارطة طريق شاملة للأمن السيبراني من الصفر حتى الاحتراف",
+  "levels": [
+    {
+      "level": 1,
+      "name": "الأساسيات",
+      "duration_months": 3,
+      "modules": [
+        {
+          "id": "networking-fundamentals",
+          "title": "أساسيات الشبكات",
+          "topics": [
+            "OSI Model (7 Layers)",
+            "TCP/IP Protocol Suite",
+            "IP Addressing & Subnetting",
+            "DNS, DHCP, NAT",
+            "Firewalls & Load Balancers",
+            "VPN & Tunneling"
+          ],
+          "file": "01-networking-fundamentals.md"
+        },
+        {
+          "id": "operating-systems",
+          "title": "أنظمة التشغيل",
+          "topics": [
+            "Linux Basics (CLI, Permissions)",
+            "Windows Administration",
+            "Process Management",
+            "Memory Management",
+            "Kernel & Security Models"
+          ],
+          "file": "02-operating-systems.md"
+        },
+        {
+          "id": "programming-security",
+          "title": "البرمجة للأمن",
+          "topics": [
+            "Python for Security",
+            "Bash Scripting",
+            "PowerShell",
+            "Regex for Log Analysis"
+          ],
+          "file": "03-programming-for-security.md"
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "name": "المبادئ الأمنية",
+      "duration_months": 6,
+      "modules": [
+        {
+          "id": "cryptography",
+          "title": "التشفير",
+          "topics": [
+            "Symmetric Encryption (AES, DES)",
+            "Asymmetric Encryption (RSA, ECC)",
+            "Hashing (MD5, SHA, bcrypt)",
+            "Digital Signatures",
+            "TLS/SSL Protocols"
+          ],
+          "file": "04-cryptography.md"
+        },
+        {
+          "id": "web-security",
+          "title": "أمن الويب",
+          "topics": [
+            "OWASP Top 10",
+            "XSS & CSRF",
+            "SQL Injection",
+            "Authentication Bypass",
+            "Secure Coding Practices"
+          ],
+          "file": "06-web-security.md"
+        },
+        {
+          "id": "network-security",
+          "title": "أمن الشبكات",
+          "topics": [
+            "Firewalls (WAF, NGFW)",
+            "IDS/IPS",
+            "SIEM & Log Management",
+            "Zero Trust Architecture"
+          ],
+          "file": "07-network-security.md"
+        }
+      ]
+    },
+    {
+      "level": 3,
+      "name": "الاختراق الأخلاقي",
+      "duration_months": 12,
+      "modules": [
+        {
+          "id": "penetration-testing",
+          "title": "اختبار الاختراق",
+          "topics": [
+            "Reconnaissance & OSINT",
+            "Scanning & Enumeration",
+            "Exploitation Frameworks",
+            "Post-Exploitation",
+            "Privilege Escalation",
+            "Password Attacks",
+            "Active Directory Attacks"
+          ],
+          "file": "05-ethical-hacking.md"
+        }
+      ]
+    },
+    {
+      "level": 4,
+      "name": "التخصص",
+      "duration_months": 18,
+      "modules": [
+        {
+          "id": "malware-analysis",
+          "title": "تحليل البرمجيات الخبيثة",
+          "topics": [
+            "Static Analysis",
+            "Dynamic Analysis",
+            "Reverse Engineering",
+            "Debugging"
+          ],
+          "file": "08-malware-analysis.md"
+        },
+        {
+          "id": "digital-forensics",
+          "title": "التحقيق الجنائي الرقمي",
+          "topics": [
+            "File Recovery",
+            "Memory Forensics",
+            "Network Forensics",
+            "Incident Response"
+          ],
+          "file": "09-digital-forensics.md"
+        },
+        {
+          "id": "cloud-security",
+          "title": "أمن السحابة",
+          "topics": [
+            "AWS Security Services",
+            "Azure Security Center",
+            "GCP Security Command Center",
+            "Container Security"
+          ],
+          "file": "10-cloud-security.md"
+        }
+      ]
+    }
+  ],
+  "certifications": [
+    {"name": "CompTIA Security+", "level": "beginner", "provider": "CompTIA"},
+    {"name": "eJPT", "level": "intermediate", "provider": "eLearnSecurity"},
+    {"name": "OSCP", "level": "advanced", "provider": "Offensive Security"},
+    {"name": "CISSP", "level": "advanced", "provider": "ISC2"},
+    {"name": "CISM", "level": "advanced", "provider": "ISACA"}
+  ],
+  "tools": [
+    "Nmap", "Metasploit", "Burp Suite", "Wireshark", "John the Ripper",
+    "Hashcat", "Hydra", "SQLMap", "Nikto", "Gobuster"
+  ],
+  "resources": {
+    "free": ["TryHackMe", "HackTheBox", "PentesterLab"],
+    "paid": ["TCM Security Academy", "Offensive Security"]
+  }
+}

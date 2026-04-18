@@ -1,0 +1,110 @@
+{
+  "id": "software-engineering",
+  "name": "هندسة البرمجيات",
+  "name_en": "Software Engineering",
+  "description": "خارطة طريق شاملة لهندسة البرمجيات",
+  "levels": [
+    {
+      "level": 1,
+      "name": "الأساسيات",
+      "duration_months": 3,
+      "modules": [
+        {
+          "id": "dsa",
+          "title": "هياكل البيانات والخوارزميات",
+          "topics": [
+            "Arrays & Strings",
+            "Linked Lists",
+            "Stacks & Queues",
+            "Hash Tables",
+            "Trees & Graphs",
+            "Heaps",
+            "Big O Notation",
+            "Sorting Algorithms"
+          ],
+          "file": "01-data-structures-algorithms.md"
+        }
+      ]
+    },
+    {
+      "level": 2,
+      "name": "التصميم البرمجي",
+      "duration_months": 6,
+      "modules": [
+        {
+          "id": "system-design",
+          "title": "تصميم الأنظمة",
+          "topics": [
+            "Scalability (Horiz/Vert)",
+            "Load Balancing",
+            "Caching Strategies",
+            "Database Sharding",
+            "CDN & Edge",
+            "URL Shortener Design",
+            "Rate Limiter Design",
+            "Chat System Design"
+          ],
+          "file": "02-system-design.md"
+        },
+        {
+          "id": "design-patterns",
+          "title": "أنماط التصميم",
+          "topics": [
+            "Creational (Singleton, Factory, Builder)",
+            "Structural (Adapter, Decorator, Facade)",
+            "Behavioral (Observer, Strategy, Command)",
+            "SOLID Principles",
+            "Repository Pattern",
+            "Unit of Work"
+          ],
+          "file": "03-design-patterns.md"
+        },
+        {
+          "id": "databases",
+          "title": "قواعد البيانات",
+          "topics": [
+            "SQL (PostgreSQL, MySQL)",
+            "NoSQL (MongoDB, Redis)",
+            "ORM & Query Builders",
+            "Database Design",
+            "Indexing & Optimization"
+          ],
+          "file": "04-databases.md"
+        }
+      ]
+    },
+    {
+      "level": 3,
+      "name": "DevOps",
+      "duration_months": 6,
+      "modules": [
+        {
+          "id": "devops",
+          "title": "DevOps و CI/CD",
+          "topics": [
+            "Git Advanced",
+            "Docker",
+            "Kubernetes",
+            "CI/CD Pipelines",
+            "Monitoring & Logging"
+          ],
+          "file": "05-devops-cicd.md"
+        }
+      ]
+    }
+  ],
+  "certifications": [
+    {"name": "AWS Certified Developer", "level": "intermediate", "provider": "AWS"},
+    {"name": "Docker Certified Associate", "level": "intermediate", "provider": "Docker"},
+    {"name": "CKA", "level": "advanced", "provider": "CNCF"},
+    {"name": "CKAD", "level": "advanced", "provider": "CNCF"}
+  ],
+  "tools": [
+    "Git", "Docker", "Kubernetes", "Jenkins", "GitHub Actions",
+    "Terraform", "Ansible", "Prometheus", "Grafana"
+  ],
+  "resources": {
+    "free": ["NeetCode", "LeetCode"],
+    "paid": ["AlgoExpert"]
+  }
+}
